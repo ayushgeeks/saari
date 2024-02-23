@@ -1,5 +1,14 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/saari/public_html/
-    - /bin/cp * $DEPLOYPATH
+php:
+  preset: laravel
+  version: 8
+  disabled:
+    - no_unused_imports
+  finder:
+    not-name:
+      - index.php
+      - server.php
+js:
+  finder:
+    not-name:
+      - webpack.mix.js
+css: true
